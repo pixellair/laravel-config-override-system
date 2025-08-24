@@ -13,7 +13,7 @@ composer require pixellair/laravel-config-override-system
 To create the necessary tables for storing discounts and their usage:
 
 ```bash
-php artisan vendor:publish --tag=laravel-discount-system-migrations
+php artisan vendor:publish --tag=migrations
 php artisan migrate
 ```
 ### 3. Publish Configs
