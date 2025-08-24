@@ -1,5 +1,5 @@
 <?php
-namespace Pixellair\ConfigOverrideSystem\Models;
+namespace ConfigOverrideSystem\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class ConfigOverride extends model{

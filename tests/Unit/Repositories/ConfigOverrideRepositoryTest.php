@@ -1,9 +1,9 @@
 <?php
 
-namespace Pixellair\ConfigOverrideSystem\Tests\Unit;
+namespace ConfigOverrideSystem\Tests\Unit;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Pixellair\ConfigOverrideSystem\Repositories\ConfigOverrideRepository;
-use Pixellair\ConfigOverrideSystem\Tests\TestCase;
+use ConfigOverrideSystem\Repositories\ConfigOverrideRepository;
+use ConfigOverrideSystem\Tests\TestCase;
 use function config;
 
 

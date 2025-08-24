@@ -1,10 +1,10 @@
 <?php
-namespace Pixellair\ConfigOverrideSystem\Tests\Feature\Providers;
+namespace ConfigOverrideSystem\Tests\Feature\Providers;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Pixellair\ConfigOverrideSystem\ConfigOverrideServiceProvider;
-use Pixellair\ConfigOverrideSystem\Repositories\ConfigOverrideRepository;
-use Pixellair\ConfigOverrideSystem\Services\ConfigOverrideService;
-use Pixellair\ConfigOverrideSystem\Tests\TestCase;
+use ConfigOverrideSystem\ConfigOverrideServiceProvider;
+use ConfigOverrideSystem\Repositories\ConfigOverrideRepository;
+use ConfigOverrideSystem\Services\ConfigOverrideService;
+use ConfigOverrideSystem\Tests\TestCase;
 
 class ConfigOverrideServiceProviderTest extends TestCase
 {

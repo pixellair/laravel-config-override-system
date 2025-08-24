@@ -1,9 +1,9 @@
 <?php
 
-namespace Pixellair\ConfigOverrideSystem\Tests;
+namespace ConfigOverrideSystem\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Pixellair\ConfigOverrideSystem\ConfigOverrideServiceProvider;
+use ConfigOverrideSystem\ConfigOverrideServiceProvider;
 
 abstract class TestCase extends Orchestra
 {

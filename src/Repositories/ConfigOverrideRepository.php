@@ -1,8 +1,8 @@
 <?php
 
-namespace Pixellair\ConfigOverrideSystem\Repositories;
-use Pixellair\ConfigOverrideSystem\Interfaces\ConfigOverrideStorageInterface;
-use Pixellair\ConfigOverrideSystem\Models\ConfigOverride;
+namespace ConfigOverrideSystem\Repositories;
+use ConfigOverrideSystem\Interfaces\ConfigOverrideStorageInterface;
+use ConfigOverrideSystem\Models\ConfigOverride;
 
 class ConfigOverrideRepository implements ConfigOverrideStorageInterface
 {

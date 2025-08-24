@@ -1,8 +1,8 @@
 <?php
-namespace Pixellair\ConfigOverrideSystem\Services;
+namespace ConfigOverrideSystem\Services;
 use Illuminate\Support\Facades\Cache;
-use Pixellair\ConfigOverrideSystem\Interfaces\ConfigOverrideInterface;
-use Pixellair\ConfigOverrideSystem\Repositories\ConfigOverrideRepository;
+use ConfigOverrideSystem\Interfaces\ConfigOverrideInterface;
+use ConfigOverrideSystem\Repositories\ConfigOverrideRepository;
 
 class ConfigOverrideService implements ConfigOverrideInterface
 {

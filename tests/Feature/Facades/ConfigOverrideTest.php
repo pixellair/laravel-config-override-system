@@ -1,8 +1,8 @@
 <?php
-namespace Pixellair\ConfigOverrideSystem\Tests\Feature\Facades;
+namespace ConfigOverrideSystem\Tests\Feature\Facades;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Pixellair\ConfigOverrideSystem\Facades\ConfigOverride;
-use Pixellair\ConfigOverrideSystem\Tests\TestCase;
+use ConfigOverrideSystem\Facades\ConfigOverride;
+use ConfigOverrideSystem\Tests\TestCase;
 
 class ConfigOverrideTest extends TestCase
 {

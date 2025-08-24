@@ -1,10 +1,10 @@
 <?php
-namespace Pixellair\ConfigOverrideSystem\Tests\Unit;
+namespace ConfigOverrideSystem\Tests\Unit;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Cache;
-use Pixellair\ConfigOverrideSystem\Repositories\ConfigOverrideRepository;
-use Pixellair\ConfigOverrideSystem\Services\ConfigOverrideService;
-use Pixellair\ConfigOverrideSystem\Tests\TestCase;
+use ConfigOverrideSystem\Repositories\ConfigOverrideRepository;
+use ConfigOverrideSystem\Services\ConfigOverrideService;
+use ConfigOverrideSystem\Tests\TestCase;
 use function config;
 
 class ConfigOverrideServiceTest extends TestCase
