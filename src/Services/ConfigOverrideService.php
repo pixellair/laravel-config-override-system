@@ -13,9 +13,9 @@ class ConfigOverrideService implements ConfigOverrideInterface
     private ConfigOverrideRepository $repository;
 
     public function __construct(ConfigOverrideRepository $repository){
-        $this->isConfigOverrideEnabled = config('config-override.is_config_override_enable');
-        $this->isCacheEnabled = config('config-override.is_caching_enable');
-        $this->cache_prefix = config('config-override.cache_prefix');
+        $this->isConfigOverrideEnabled = config('config-override.is_config_override_enable',true);
+        $this->isCacheEnabled = config('config-override.is_caching_enable',true);
+        $this->cache_prefix = config('config-override.cache_prefix','config_override');
         $this->repository = $repository;
     }
 
