@@ -1,5 +1,5 @@
 <?php
-namespace Pixellair\ConfigOverrideSystem\Interfaces;
+namespace ConfigOverrideSystem\Interfaces;
 interface ConfigOverrideStorageInterface
 {
     public function set(string $key, mixed $value = null): void;
