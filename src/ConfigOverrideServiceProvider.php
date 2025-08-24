@@ -1,10 +1,10 @@
 <?php
-namespace Pixellair\ConfigOverrideSystem;
+namespace ConfigOverrideSystem;
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
-use Pixellair\ConfigOverrideSystem\Repositories\ConfigOverrideRepository;
-use Pixellair\ConfigOverrideSystem\Services\ConfigOverrideService;
+use ConfigOverrideSystem\Repositories\ConfigOverrideRepository;
+use ConfigOverrideSystem\Services\ConfigOverrideService;
 
 class ConfigOverrideServiceProvider extends ServiceProvider
 {
