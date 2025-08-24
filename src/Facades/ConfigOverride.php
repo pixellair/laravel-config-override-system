@@ -1,5 +1,5 @@
 <?php
-namespace Pixellair\ConfigOverrideSystem\Facades;
+namespace ConfigOverrideSystem\Facades;
 use Illuminate\Support\Facades\Facade;
 
 class ConfigOverride extends Facade
