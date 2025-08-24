@@ -27,7 +27,7 @@ class ConfigOverrideServiceProvider extends ServiceProvider
             ], 'config');
         }
 
-        if(Schema::hasTable('cache') && Schema::hasTable('config_overrides')){
+        if(Schema::hasTable('config_overrides')){
             $this->app->make(ConfigOverrideService::class)->load();
         }
 

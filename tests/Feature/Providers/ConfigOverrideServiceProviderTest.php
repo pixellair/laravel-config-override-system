@@ -21,8 +21,7 @@ class ConfigOverrideServiceProviderTest extends TestCase
     }
 
     public function test_service_load_is_called_on_boot(){
-        $repository = new ConfigOverrideRepository();
-        $service = new ConfigOverrideService($repository);
+        $service = app('config-override');
         $service->set('app.debug', true);
         $provider = $this->app->getProvider(ConfigOverrideServiceProvider::class);
         $provider->boot();

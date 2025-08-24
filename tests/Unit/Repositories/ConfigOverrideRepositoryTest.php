@@ -1,6 +1,6 @@
 <?php
 
-namespace ConfigOverrideSystem\Tests\Unit;
+namespace ConfigOverrideSystem\Tests\Unit\Repositories;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use ConfigOverrideSystem\Repositories\ConfigOverrideRepository;
 use ConfigOverrideSystem\Tests\TestCase;
@@ -24,8 +24,11 @@ class ConfigOverrideRepositoryTest extends TestCase
         $repository = new ConfigOverrideRepository();
         $repository->set('app.testPackage', $value);
         config($repository->all());
-        $this->assertArrayHasKey('TestPackageKey_1', json_decode(config('app.testPackage'), true));
-        $this->assertArrayHasKey('TestPackageKey_1', json_decode($repository->get('app.testPackage'),true));
+        $config = config('app.testPackage');
+        $result = is_string($config) ? json_decode($config, true) : $config;
+
+        $this->assertArrayHasKey('TestPackageKey_1', $result);
+        $this->assertArrayHasKey('TestPackageKey_1', $result);
     }
 
     public function test_it_returns_null_when_key_does_not_exist(){

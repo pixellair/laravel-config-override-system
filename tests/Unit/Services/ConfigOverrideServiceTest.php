@@ -1,5 +1,5 @@
 <?php
-namespace ConfigOverrideSystem\Tests\Unit;
+namespace ConfigOverrideSystem\Tests\Unit\Services;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Cache;
 use ConfigOverrideSystem\Repositories\ConfigOverrideRepository;
@@ -12,8 +12,7 @@ class ConfigOverrideServiceTest extends TestCase
     use RefreshDatabase;
 
     public function test_it_loads_overrides_from_repository_into_config(){
-        $repository = new ConfigOverrideRepository();
-        $service = new ConfigOverrideService($repository);
+        $service = app('config-override');
         $service->set('app.name', 'OverriddenName');
         $service->set('app.debug', false);
         $service->load();
@@ -22,9 +21,8 @@ class ConfigOverrideServiceTest extends TestCase
     }
 
     public function test_it_loads_overrides_from_cache_when_enabled(){
-        $repository = new ConfigOverrideRepository();
         Cache::forget(config('config-override.cache_prefix'));
-        $service = new ConfigOverrideService($repository);
+        $service = app('config-override');
         $this->assertFalse(config('app.debug'));
         $service->set('app.debug', true);
         $service->load();
@@ -46,15 +44,13 @@ class ConfigOverrideServiceTest extends TestCase
     }
 
     public function test_it_returns_default_when_key_missing(){
-        $repository = new ConfigOverrideRepository();
-        $service = new ConfigOverrideService($repository);
+        $service = app('config-override');
         $this->assertNull(config('nonexistent.key'));
         $this->assertEquals('default_value', $service->get('nonexistent.key', 'default_value'));
     }
 
     public function test_delete(){
-        $repository = new ConfigOverrideRepository();
-        $service = new ConfigOverrideService($repository);
+        $service = app('config-override');
         $service->set('app.test', 'testPackage');
         $this->assertNotNull(config('app.test'));
         $service->delete('app.test');

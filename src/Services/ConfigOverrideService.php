@@ -34,7 +34,7 @@ class ConfigOverrideService implements ConfigOverrideInterface
         config($this->flatten($overrides));
     }
 
-    public function get(string|array $key, mixed $default = null):mixed
+    public function get(string $key, mixed $default = null):mixed
     {
         if(!$this->isConfigOverrideEnabled){
             return config($key, $default);
