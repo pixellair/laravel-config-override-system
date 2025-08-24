@@ -1,5 +1,5 @@
 <?php
-namespace Pixellair\ConfigOverrideSystem\Interfaces;
+namespace ConfigOverrideSystem\Interfaces;
 interface ConfigOverrideInterface
 {
     public function load(): void;
