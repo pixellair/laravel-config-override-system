@@ -19,7 +19,7 @@ php artisan migrate
 ### 3. Publish Configs
 
 ```bash
-php artisan vendor:publish --provider="Vendor\Pixellair\ConfigOverrideSystem\ConfigOverrideServiceProvider" --tag=config
+php artisan vendor:publish --provider="ConfigOverrideSystem\ConfigOverrideServiceProvider" --tag=config
 ```
 
 ###⚙️ Usage
